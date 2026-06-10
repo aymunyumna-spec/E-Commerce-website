@@ -81,5 +81,11 @@ app.post('/api/products', async (req, res) => {
 });
 
 // Server Port
-const PORT = 5000;
+// Server Port (Vercel automatic port assign karega)
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+
+// Yeh line Vercel ke liye lazmi hai
+module.exports = app;
+
+
